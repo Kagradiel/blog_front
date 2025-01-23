@@ -13,6 +13,7 @@ import ListaPostagens from "./components/postagens/listapostagens/ListaPostagens
 import FormPostagem from "./components/postagens/formpostagem/FormPostagem";
 import DeletarPostagem from "./components/postagens/deletarpostagem/DeletarPostagem";
 import { useContext, useEffect, useState } from "react";
+import UsuarioLogin from "./models/UsuarioLogin";
 
 interface LocationHandlerProps {
   usuario: UsuarioLogin;
@@ -27,7 +28,7 @@ function App() {
     <BrowserRouter>
       <LocationHandler usuario={usuario} setShowNavbar={setShowNavbar} />
       {showNavbar && <Navbar />}
-      <div className="min-h-[80vh]">
+      <div className="min-h-[88.7dvh]">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />

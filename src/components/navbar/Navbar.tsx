@@ -16,15 +16,15 @@ function Navbar() {
   return (
     <>
       <div
-        className="w-full bg-indigo-900 text-white
-                flex justify-center py-4"
+        className="w-full sm:w-1/3 bg-black bg-opacity-30 text-white flex justify-center py-4 
+            backdrop-blur-lg rounded-[20px] fixed top-0 left-1/2 transform -translate-x-1/2 pl-[20px] pr-[20px] mt-[10px]"
       >
         <div className="container flex justify-between text-lg">
-          <Link to="/home" className="text-2xl font-bold">
+          <Link to="/home" className="text-lg font-bold">
             Blog Pessoal
           </Link>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 text-base">
 
             <Link to="/postagens" className="hover:underline">
               Postagens
