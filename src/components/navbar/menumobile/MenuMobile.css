@@ -1,0 +1,31 @@
+.popup-content{
+    margin:20px 0 0 0;
+    width:50%;
+    padding:5px;
+    border:1px solid #d7d7d7;
+    background:transparent;
+    
+}
+
+.bg-menu{
+    background-image: url(../../../assets/images/menu.svg);
+    height: 20px;
+    width: auto;
+}
+
+[role=tooltip].popup-content{
+    width:200px;  
+}
+       
+
+.menu-fundo{
+  background-image: url('../../../assets/images/menu.svg');
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7457%)
+    hue-rotate(23deg) brightness(95%) contrast(87%);
+}
+
+
+

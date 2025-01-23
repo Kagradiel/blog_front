@@ -76,21 +76,21 @@
 /* animação para revelar texto*/
 
 .entrada-lateral {
-  animation: slideIn 1.5s;
-  animation-delay: 2s;
+  animation: slideIn 1s;
+  animation-delay: .5s;
   opacity: 0;
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
 
-.titulo-da-pagina {
-  animation: showup 1.5s ease-in-out;
+.entrada-baixo-cima {
+  animation: showup 1s ease-in-out;
   animation-iteration-count: 1;
 }
 
 @keyframes showup {
   0% {
-    transform: translateY(400%);
+    transform: translateY(100%);
     opacity: 0;
   }
   20% {
@@ -107,7 +107,7 @@
 
 @keyframes slideIn {
   0% {
-    transform: translateY(400%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   20% {
@@ -117,7 +117,7 @@
     opacity: 0.75;
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }

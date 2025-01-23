@@ -40,7 +40,7 @@ function Login() {
                     h-screen place-items-center font-bold fundo-mascara"
       >
         <form
-          className="flex justify-center items-center flex-col w-1/2 gap-4 entrada-lateral"
+          className="flex justify-center items-center flex-col w-1/2 gap-4 entrada-baixo-cima"
           onSubmit={login}
         >
           <h2 className="text-zinc-900 text-5xl font-light">Entrar</h2>
@@ -108,7 +108,7 @@ function Login() {
           </p>
         </form>
         
-        <div className="titulo-da-pagina text-7xl font-light hidden lg:block">
+        <div className="entrada-baixo-cima text-7xl font-light hidden lg:block">
           <p>Blog <span className="entrada-lateral">Pessoal</span></p> 
         </div>
 
