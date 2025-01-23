@@ -34,47 +34,56 @@ function Login() {
 
   return (
     <>
+    <div className="fundoLogin">
       <div
         className="grid grid-cols-1 lg:grid-cols-2 
-                    h-screen place-items-center font-bold "
+                    h-screen place-items-center font-bold fundo-mascara"
       >
         <form
-          className="flex justify-center items-center flex-col w-1/2 gap-4"
+          className="flex justify-center items-center flex-col w-1/2 gap-4 entrada-lateral"
           onSubmit={login}
         >
-          <h2 className="text-slate-900 text-5xl ">Entrar</h2>
-          <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuário</label>
+          <h2 className="text-zinc-900 text-5xl font-light">Entrar</h2>
+          <div className="relative flex flex-col w-full">
             <input
               type="text"
               id="usuario"
               name="usuario"
               placeholder="Usuario"
-              className="border-2 border-slate-700 rounded p-2"
+              className="peer h-10 w-full border-b-2 border-zinc-300 text-zinc-400 
+              bg-transparent placeholder-transparent focus:outline-none focus:border-zinc-950 focus:text-zinc-800"
               value={usuarioLogin.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
               }
             />
+            <label className="absolute left-0 -top-3.5 text-zinc-500 text-sm 
+            transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-400 
+            peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-zinc-950 
+            peer-focus:text-sm" htmlFor="usuario">Usuário</label>
+
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+          <div className="relative flex flex-col w-full">
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="peer h-10 w-full border-b-2 border-zinc-300 text-zinc-400 
+              bg-transparent placeholder-transparent focus:outline-none focus:border-zinc-950 focus:text-gray-800"
               value={usuarioLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
               }
             />
+            <label className="absolute left-0 -top-3.5 text-zinc-500 text-sm 
+            transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-400 
+            peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-zinc-950 
+            peer-focus:text-sm" htmlFor="senha">Senha</label>
           </div>
           <button
             type="submit"
-            className="rounded bg-indigo-400 flex justify-center
-                                   hover:bg-indigo-900 text-white w-1/2 py-2"
+            className="button"
           >
             {isLoading ? (
               <RotatingLines
@@ -89,16 +98,24 @@ function Login() {
             )}
           </button>
 
-          <hr className="border-slate-800 w-full" />
+          <hr className="border-zinc-800 w-full" />
 
-          <p>
+          <p className="text-zinc-950">
             Ainda não tem uma conta?{" "}
-            <Link to="/cadastro" className="text-indigo-800 hover:underline">
+            <Link to="/cadastro" className="text-zinc-500 hover:underline">
               Cadastre-se
             </Link>
           </p>
         </form>
-        <div className="fundoLogin hidden lg:block"></div>
+        
+        <div className="titulo-da-pagina text-7xl font-light hidden lg:block">
+          <p>Blog <span className="entrada-lateral">Pessoal</span></p> 
+        </div>
+
+        </div>
+        
+        
+
       </div>
     </>
   );
