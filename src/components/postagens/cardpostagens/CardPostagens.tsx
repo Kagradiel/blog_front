@@ -7,40 +7,51 @@ interface CardPostagensProps {
 
 function CardPostagem({ postagem }: CardPostagensProps) {
     return (
-        <div className='border-slate-900 border 
-            flex flex-col rounded overflow-hidden justify-between'>
-                
-            <div>
-                <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
-                    <img
-                        src={postagem.usuario?.foto}
-                        className='h-12 rounded-full'
-                        alt={postagem.usuario?.nome} />
-                    <h3 className='text-lg font-bold text-center uppercase'>
-                        {postagem.usuario?.nome}
-                    </h3>
+        <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden mx-auto">
+            <div className="flex justify-between items-center px-6 py-4">
+                <div className="flex space-x-4">
+                    <div>
+                        <img
+                            src={postagem.usuario?.foto}
+                            alt={postagem.usuario?.nome}
+                            className="rounded-full bg-zinc-400 h-12 w-12"
+                        />
+                    </div>
+                    <div>
+                        <div className="text-lg font-bold dark:text-white">{postagem.usuario?.nome}</div>
+                        <div className="text-sm text-gray-500 dark:text-gray-200">@{postagem.usuario?.nome}</div>
+                    </div>
                 </div>
-                <div className='p-4 '>
-                    <h4 className='text-lg font-semibold uppercase'>{postagem.titulo}</h4>
-                    <p>{postagem.texto}</p>
-                    <p>Tema: {postagem.tema?.descricao}</p>
-                    <p>Data: {new Intl.DateTimeFormat(undefined, {
-                        dateStyle: 'full',
-                        timeStyle: 'medium',
-                    }).format(new Date(postagem.data))}</p>
+                <div>
+                    
+                       <Link to={`/deletarpostagem/${postagem.id}`} className="text-red-500 border py-1 px-2 border-red-300 
+                       rounded-md">
+                        X
+                        </Link>
+                        
+                    
+                    
                 </div>
             </div>
-            <div className="flex">
-                <Link to={`/editarpostagem/${postagem.id}`}
-                    className='w-full text-white bg-indigo-400 
-                    hover:bg-indigo-800 flex items-center justify-center py-2'>
-                    <button>Editar</button>
-                </Link>
-                <Link to={`/deletarpostagem/${postagem.id}`}  
-                    className='text-white bg-red-400 
-                    hover:bg-red-700 w-full flex items-center justify-center'>
-                    <button>Deletar</button>
-                </Link>
+            <div className="px-6 py-4">
+                <div className="text-sm text-gray-800 dark:text-gray-200">
+                    {postagem.texto}
+                </div>
+                <div className="text-sm text-gray-500 dark:text-gray-400 pt-2">
+                    Tema: {postagem.tema?.descricao}
+                </div>
+                <div className="text-xs text-gray-400 dark:text-gray-500 pt-1">
+                    {new Intl.DateTimeFormat(undefined, {
+                        dateStyle: 'full',
+                        timeStyle: 'medium',
+                    }).format(new Date(postagem.data))}
+                </div>
+            </div>
+            <div className="flex items-center justify-end space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700 p-4">
+                    <Link to={`/editarpostagem/${postagem.id}`} className="text-white bg-black hover:bg-zinc-600 
+                    py-2 px-4 rounded">
+                        Editar
+                    </Link>                    
             </div>
         </div>
     )
