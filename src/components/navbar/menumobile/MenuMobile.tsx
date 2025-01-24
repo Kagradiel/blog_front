@@ -34,9 +34,9 @@ const Menu = () => {
         className=".popup-content"
       >
         <div
-          className="menu md:hidden bg-neutral-400 bg-opacity-95 text-white backdrop-blur-lg 
+          className="menu menu-interno md:hidden bg-neutral-400 bg-opacity-95 text-white backdrop-blur-lg 
                  w-[90vw] left-5 sm:left-7 top-20  rounded-[15px] flex flex-col content-center 
-                justify-between py-10 px-5 gap-15 h-[50dvh] text-base fixed font-extralight"
+                justify-between py-10 px-5 gap-15 h-[60dvh] text-base fixed font-extralight mt-3"
         >
           <div className="flex flex-col gap-9">
             <div className="menu-item ">
@@ -67,8 +67,8 @@ const Menu = () => {
               </Link>
             </div>
 
-            <div className="menu-item flex gap-10">
-              <Link to='/perfil' className='hover:underline'>
+            <div className="menu-item">
+              <Link to='/perfil' className='hover:underline flex gap-10'>
                 <span>05</span>
                 <span>Perfil</span>
               </Link>             
