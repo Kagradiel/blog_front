@@ -30,7 +30,7 @@ const Menu = () => {
       >
         <div 
           className="menu bg-neutral-400 bg-opacity-95 text-white backdrop-blur-lg 
-                 w-[90vw] left-5 top-20  rounded-[15px] flex flex-col content-center 
+                 w-[90vw] left-5 sm:left-7 top-20  rounded-[15px] flex flex-col content-center 
                 justify-between py-10 px-5 gap-15 h-[50dvh] text-base fixed font-extralight"
         >
           <div className="flex flex-col gap-9">
