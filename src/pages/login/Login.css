@@ -1,7 +1,8 @@
 /* config da imagem de fundo */
 .fundoLogin {
   background-image: url("../../assets/images/white_bg.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position-y: 100%;
 }
 
@@ -9,7 +10,7 @@
   background: #ffffff;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  mask-image: linear-gradient(to right, #000000 47%, #000000d5 64%, #000000a1 100%);
+  mask-image: linear-gradient(to bottom, #000000 47%, #000000d5 64%, #000000a1 100%);
 }
 
 /* config do botão animado*/
@@ -120,4 +121,19 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+
+@media screen and (min-width: 1280px) and (min-aspect-ratio: 16/9) {
+  
+  .fundo-mascara {
+    mask-image: linear-gradient(to right, #000000 47%, #000000d5 64%, #000000a1 100%);
+  }
+
+  .fundoLogin {
+    background-image: url("../../assets/images/white_bg.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+  }
+
 }
