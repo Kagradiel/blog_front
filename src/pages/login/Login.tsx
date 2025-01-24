@@ -110,7 +110,7 @@ function Login() {
             </p>
           </form>
 
-          <div className="entrada-baixo-cima text-7xl font-light hidden lg:block">
+          <div className="entrada-baixo-cima text-w text-7xl font-light hidden lg:block">
             <p>
               Blog <span className="entrada-lateral">Pessoal</span>
             </p>
