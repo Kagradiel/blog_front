@@ -1,8 +1,464 @@
 .fundoCadastro {
-  background-image: url("https://i.imgur.com/ZZFAmzo.jpg");
+  background-image: url("../../assets/images/head.png");
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+}
+
+.button-cadastro {
+  position: relative;
+  background-color: #727272;
+  height: 3.3rem;
+  border: 1px solid;
+  text-align: left;
+  padding: 0.75rem;
+  color: #f0f0f0;
+  font-size: 1rem;
+  font-weight: bold;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.button-cadastro span {
+  position: relative;
+  z-index: 2;
+}
+
+.button-cadastro:hover {
+  border-color: #ffffff;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.125rem;
+  color: #ffffff;
+}
+
+.button-cadastro::before,
+.button-cadastro::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(0.5rem);
+  transition: all 0.3s ease;
+}
+
+.button-cadastro::before {
+  width: 3rem;
+  height: 3rem;
+  background-color: #121313;
+  right: 0.25rem;
+  top: 0.25rem;
+  animation: efeitoLoopCadastroBefore 2s ease-in-out infinite alternate;
+}
+
+.button-cadastro::after {
+  width: 5rem;
+  height: 5rem;
+  background-color: #b9b9b9;
+  right: 2rem;
+  top: 0.75rem;
+  animation: efeitoLoopCadastroAfter 2s ease-in-out infinite alternate;
+}
+
+@keyframes efeitoLoopCadastroBefore {
+  0% {
+    right: 0.25rem;
+    bottom: 0rem;
+    box-shadow: 0px 0px 0px 0px #919191;
+  }
+  5% {
+    right: 0.5rem;
+    bottom: 0.05rem;
+    box-shadow: 1px 1px 1px 1px #919191;
+  }
+  10% {
+    right: 0.75rem;
+    bottom: 0.1rem;
+    box-shadow: 2px 2px 2px 2px #919191;
+  }
+  15% {
+    right: 1rem;
+    bottom: 0.15rem;
+    box-shadow: 3px 3px 3px 3px #919191;
+  }
+  20% {
+    right: 1.25rem;
+    bottom: 0.2rem;
+    box-shadow: 4px 4px 4px 4px #919191;
+  }
+  25% {
+    right: 1.5rem;
+    bottom: 0.25rem;
+    box-shadow: 5px 5px 5px 5px #919191;
+  }
+  30% {
+    right: 1.65rem;
+    bottom: 0.3rem;
+    box-shadow: 6px 6px 6px 6px #919191;
+  }
+  35% {
+    right: 1.75rem;
+    bottom: 0.35rem;
+    box-shadow: 7px 7px 7px 7px #919191;
+  }
+  40% {
+    right: 1.8rem;
+    bottom: 0.4rem;
+    box-shadow: 8px 8px 8px 8px #919191;
+  }
+  45% {
+    right: 1.9rem;
+    bottom: 0.45rem;
+    box-shadow: 9px 9px 9px 9px #919191;
+  }
+  50% {
+    right: 2rem;
+    bottom: 0.5rem;
+    box-shadow: 10px 10px 10px 10px #919191;
+  }
+  55% {
+    right: 2.1rem;
+    bottom: 0.6rem;
+    box-shadow: 11px 11px 11px 11px #919191;
+  }
+  60% {
+    right: 2.15rem;
+    bottom: 0.7rem;
+    box-shadow: 12px 12px 12px 12px #919191;
+  }
+  65% {
+    right: 2.25rem;
+    bottom: 0.75rem;
+    box-shadow: 13px 13px 13px 13px #919191;
+  }
+  70% {
+    right: 2.35rem;
+    bottom: 0.85rem;
+    box-shadow: 14px 14px 14px 14px #919191;
+  }
+  75% {
+    right: 2.5rem;
+    bottom: 1rem;
+    box-shadow: 15px 15px 15px 15px #919191;
+  }
+  80% {
+    right: 2.65rem;
+    bottom: 1.25rem;
+    box-shadow: 16px 16px 16px 16px #919191;
+  }
+  85% {
+    right: 2.75rem;
+    bottom: 1.5rem;
+    box-shadow: 17px 17px 17px 17px #919191;
+  }
+  90% {
+    right: 2.85rem;
+    bottom: 1.75rem;
+    box-shadow: 18px 18px 18px 18px #919191;
+  }
+  95% {
+    right: 2.9rem;
+    bottom: 1.85rem;
+    box-shadow: 19px 19px 19px 19px #919191;
+  }
+  100% {
+    right: 3rem;
+    bottom: 2rem;
+    box-shadow: 20px 20px 20px 20px #919191;
+  }
+}
+
+@keyframes efeitoLoopCadastroAfter {
+  0% {
+    right: 2rem;
+  }
+  5% {
+    right: 1.85rem;
+  }
+  10% {
+    right: 1.7rem;
+  }
+  15% {
+    right: 1.5rem;
+  }
+  20% {
+    right: 1.35rem;
+  }
+  25% {
+    right: 1rem;
+  }
+  30% {
+    right: 0.85rem;
+  }
+  35% {
+    right: 0.7rem;
+  }
+  40% {
+    right: 0.5rem;
+  }
+  45% {
+    right: 0.25rem;
+  }
+  50% {
+    right: 0;
+  }
+  55% {
+    right: -0.25rem;
+  }
+  60% {
+    right: -0.5rem;
+  }
+  65% {
+    right: -0.5rem;
+  }
+  70% {
+    right: -0.75rem;
+  }
+  75% {
+    right: -1rem;
+  }
+  80% {
+    right: -1.25rem;
+  }
+  85% {
+    right: -1.5rem;
+  }
+  90% {
+    right: -1.75rem;
+  }
+  95% {
+    right: -1.85rem;
+  }
+  100% {
+    right: -2rem;
+  }
+}
+
+.button-cadastro:hover::after {
+  animation: efeitoLoopCadastroAfter 0.5s ease-in-out infinite alternate;
+}
+
+.button-cadastro:hover::before {
+  animation: efeitoLoopCadastroBefore 0.5s ease-in-out infinite alternate;
+}
+
+.button-cancelar {
+  position: relative;
+  background-color: #470c0c;
+  height: 3.3rem;
+  border: 1px solid;
+  text-align: left;
+  padding: 0.75rem;
+  color: #fafafa;
+  font-size: 1rem;
+  font-weight: bold;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.button-cancelar span {
+  position: relative;
+  z-index: 4;
+}
+
+.button-cancelar:hover {
+  border-color: #cfcece;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.125rem;
+  color: #fffefe;
+}
+
+.button-cancelar::before,
+.button-cancelar::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+  filter: blur(0.5rem);
+  transition: all 0.3s ease;
+}
+
+.button-cancelar::before {
+  width: 3rem;
+  height: 3rem;
+  background-color: #5c0505;
+  right: 0.25rem;
+  top: 0.25rem;
+  animation: efeitoLoopCancelarAfter 5s linear infinite alternate;
+}
+
+.button-cancelar::after {
+  width: 5rem;
+  height: 2rem;
+  background-color: #630101;
+  right: 13.3rem;
+  top: 0.75rem;
+  animation: efeitoLoopCancelarAfter 5s linear infinite;
+}
+
+
+.button-cancelar:hover::after {
+  animation: efeitoLoopCancelarAfter 1s linear infinite;
+}
+
+@keyframes efeitoLoopCancelarBefore {
+  0% {
+    right: 0.25rem;
+    bottom: 0rem;
+  }
+  5% {
+    right: 0.5rem;
+    bottom: 0.05rem;
+  }
+  10% {
+    right: 0.75rem;
+    bottom: 0.1rem;
+  }
+  15% {
+    right: 1rem;
+    bottom: 0.15rem;
+  }
+  20% {
+    right: 1.25rem;
+    bottom: 0.2rem;
+  }
+  25% {
+    right: 1.5rem;
+    bottom: 0.25rem;
+  }
+  30% {
+    right: 1.65rem;
+    bottom: 0.3rem;
+  }
+  35% {
+    right: 1.75rem;
+    bottom: 0.35rem;
+  }
+  40% {
+    right: 1.8rem;
+    bottom: 0.4rem;
+  }
+  45% {
+    right: 1.9rem;
+    bottom: 0.45rem;
+  }
+  50% {
+    right: 2rem;
+    height: 28rem;
+    bottom: 0.5rem;
+  }
+  55% {
+    right: 2.1rem;
+    bottom: 0.6rem;
+  }
+  60% {
+    right: 2.15rem;
+    bottom: 0.7rem;
+  }
+  65% {
+    right: 2.25rem;
+    bottom: 0.75rem;
+  }
+  70% {
+    right: 2.35rem;
+    bottom: 0.85rem;
+  }
+  75% {
+    right: 2.5rem;
+    bottom: 1rem;
+  }
+  80% {
+    right: 2.65rem;
+    bottom: 1.25rem;
+  }
+  85% {
+    right: 2.75rem;
+    bottom: 1.5rem;
+  }
+  90% {
+    right: 2.85rem;
+    bottom: 1.75rem;
+  }
+  95% {
+    right: 2.9rem;
+    bottom: 1.85rem;
+  }
+  100% {
+    right: 3rem;
+    bottom: 2rem;
+  }
+}
+
+@keyframes efeitoLoopCancelarAfter {
+  0% {
+    right: 13.3rem;
+  }
+  5% {
+    right: 12.7rem;
+  }
+  10% {
+    right: 11.7rem;
+  }
+  15% {
+    right: 11rem;
+  }
+  20% {
+    right: 10.35rem;
+  }
+  25% {
+    right: 10rem;
+  }
+  30% {
+    width: 5rem;
+    height: 2rem;
+    right: 9rem;
+  }
+  35% {
+    right: 8rem;
+  }
+  40% {
+    right: 7rem;
+  }
+  45% {
+    right: 6rem;
+  }
+  50% {
+    width: 10rem;
+    height: 5rem;
+    right: 5rem;
+  }
+  55% {
+    right: 4rem;
+  }
+  60% {
+    right: 3rem;
+  }
+  65% {
+    right: 2rem;
+  }
+  70% {
+    width: 5rem;
+    height: 2rem;
+    right: 1rem;
+  }
+  75% {
+    right: 0rem;
+  }
+  80% {
+    right: -1rem;
+  }
+  85% {
+    right: -2rem;
+  }
+  90% {
+    right: -3rem;
+  }
+  95% {
+    right: -1.5rem;
+  }
+  100% {
+    right: -2rem;
+  }
 }
