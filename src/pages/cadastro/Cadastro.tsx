@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Usuario from "../../models/Usuario";
 import { cadastrarUsuario } from "../../services/Service";
 import "./Cadastro.css";
-import { RotatingLines } from "react-loader-spinner";
+import { MutatingDots } from "react-loader-spinner";
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -161,13 +161,9 @@ function Cadastro() {
                            flex justify-center"
             >
               {isLoading ? (
-                <RotatingLines
-                  strokeColor="white"
-                  strokeWidth="5"
-                  animationDuration="0.75"
-                  width="24"
-                  visible={true}
-                />
+                <div className="flex justify-center w-full pt-28">
+                  <MutatingDots color="#000000" secondaryColor="#5a5a5a" />
+                </div>
               ) : (
                 <span>Cadastrar</span>
               )}
