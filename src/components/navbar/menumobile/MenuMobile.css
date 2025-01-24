@@ -29,3 +29,14 @@
 
 
 
+.menu-interno{
+    height: 420px;
+}
+
+@media screen and (min-height: 700px) 
+{
+    .menu-interno{
+        height: 60dvh;
+    }
+    
+}
