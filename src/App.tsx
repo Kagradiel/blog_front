@@ -14,6 +14,8 @@ import FormPostagem from "./components/postagens/formpostagem/FormPostagem";
 import DeletarPostagem from "./components/postagens/deletarpostagem/DeletarPostagem";
 import { useContext, useEffect, useState } from "react";
 import UsuarioLogin from "./models/UsuarioLogin";
+import Perfil from "./pages/perfil/Perfil";
+import { ToastContainer } from "react-toastify";
 
 interface LocationHandlerProps {
   usuario: UsuarioLogin;
@@ -25,27 +27,31 @@ function App() {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
-    <BrowserRouter>
-      <LocationHandler usuario={usuario} setShowNavbar={setShowNavbar} />
-      {showNavbar && <Navbar />}
-      <div className="min-h-[88.7dvh]">
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/temas" element={<ListaTemas />} />
-          <Route path="/cadastrartema" element={<FormTema />} />
-          <Route path="/editartema/:id" element={<FormTema />} />
-          <Route path="/deletartema/:id" element={<DeletarTema />} />
-          <Route path="/postagens" element={<ListaPostagens />} />
-          <Route path="/cadastrarpostagem" element={<FormPostagem />} />
-          <Route path="/editarpostagem/:id" element={<FormPostagem />} />
-          <Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
-        </Routes>
-      </div>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <ToastContainer />
+      <BrowserRouter>
+        <LocationHandler usuario={usuario} setShowNavbar={setShowNavbar} />
+        {showNavbar && <Navbar />}
+        <div className="min-h-[88.7dvh]">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/temas" element={<ListaTemas />} />
+            <Route path="/cadastrartema" element={<FormTema />} />
+            <Route path="/editartema/:id" element={<FormTema />} />
+            <Route path="/deletartema/:id" element={<DeletarTema />} />
+            <Route path="/postagens" element={<ListaPostagens />} />
+            <Route path="/cadastrarpostagem" element={<FormPostagem />} />
+            <Route path="/editarpostagem/:id" element={<FormPostagem />} />
+            <Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
+            <Route path="/perfil" element={<Perfil />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
@@ -53,7 +59,6 @@ function LocationHandler({ usuario, setShowNavbar }: LocationHandlerProps) {
   const location = useLocation();
 
   useEffect(() => {
-
     if (
       usuario?.token &&
       usuario?.token !== "" &&

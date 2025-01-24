@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import MenuMobile from "./menumobile/MenuMobile";
+import { ToastAlert } from "../../utils/ToastAlert";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ function Navbar() {
 
   function logout() {
     handleLogout();
-    alert("O Usuário foi desconectado com sucesso!");
+    ToastAlert('O Usuário foi desconectado com sucesso!', 'info')
     navigate("/login");
   }
 
@@ -42,7 +43,9 @@ function Navbar() {
               Cadastrar tema
             </Link>
 
-            Perfil
+            <Link to='/perfil' className='hover:underline'>
+              Perfil
+            </Link>
 
             <Link to="" onClick={logout} className="hover:underline">
               Sair
